@@ -21,6 +21,10 @@ def divide(a, b):
         raise ValueError("Cannot divide by zero!")
     return a / b
 
+def power(base, exponent):
+    """Raise base to the power of exponent"""
+    return base ** exponent
+
 def greet(name):
     """Greet a user by name"""
     if not name:
@@ -35,5 +39,6 @@ if __name__ == "__main__":
     print(f"10 - 4 = {subtract(10, 4)}")
     print(f"6 * 7 = {multiply(6, 7)}")
     print(f"20 / 4 = {divide(20, 4)}")
+    print(f"2 ^ 3 = {power(2, 3)}")
     print()
     print(greet("Diego"))
