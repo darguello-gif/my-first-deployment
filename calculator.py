@@ -17,8 +17,7 @@ def multiply(a, b):
 
 def divide(a, b):
     """Divide a by b"""
-    if b == 0:
-        raise ValueError("Cannot divide by zero!")
+    # BUG: Removed the zero check - this will cause tests to fail!
     return a / b
 
 def power(base, exponent):
