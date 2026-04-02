@@ -4,7 +4,7 @@ These tests will run automatically every time you push code!
 """
 
 import pytest
-from calculator import add, subtract, multiply, divide, greet
+from calculator import add, subtract, multiply, divide, power, greet
 
 
 class TestBasicMath:
@@ -41,6 +41,13 @@ class TestBasicMath:
         """Test that dividing by zero raises an error"""
         with pytest.raises(ValueError, match="Cannot divide by zero"):
             divide(10, 0)
+    
+    def test_power(self):
+        """Test power/exponent function"""
+        assert power(2, 3) == 8
+        assert power(5, 2) == 25
+        assert power(10, 0) == 1
+        assert power(3, 4) == 81
 
 
 class TestGreeting:
